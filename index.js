@@ -14,4 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
     let shouldClearResult = false;
 
     // Function to update the displayed result
+    function updateResult(value) {
+        resultElement.value = value;
+    }
+
+    // Function to handle the number button clicks
+    function handleNumberClick(number) {
+        if (shouldClearResult) {
+            // Clear the result if a new number is being entered after a calculation
+            updateResult('');
+            shouldClearResult = false;
+        }
+        // Append the clicked number to the result
+        resultElement.value += number;
+    }
 });
