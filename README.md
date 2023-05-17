@@ -13,3 +13,6 @@ This is a test project to work and test on various things.
 - Add a history feature to see previous calculations
 - Add a memory feature to store values for later use
 - Improve the UI
+
+
+![picture of current calculator style](../../../../tmp/Spectacle.XmFIaU/ss_20230516_223742.png)
