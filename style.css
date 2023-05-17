@@ -26,63 +26,64 @@
 }
 
 .calculator {
-    background-color: #f2f2f2;
+    background-color: #232931;
     padding: 20px;
     max-width: 400px;
     margin: 0 auto;
-    border: solid 1px #ccc;
     box-shadow: var(--shadow-elevation-medium);
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 20em;
 }
 
 #result {
     width: 100%;
     padding: 10px;
-    font-size: 24px;
+    font-size: 36px;
     border: none;
     box-shadow: var(--shadow-elevation-low);
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #393e46;
+    text-align: right;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    margin-top: 20px;
 }
 
 button {
-    padding: 10px;
+    padding: 20px;
     font-size: 24px;
     border: none;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #4ecaa3;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ddd;
+    background-color: #3fb185;
 }
 
 .clear {
-    background-color: #ff4136;
-    color: #fff;
+    background-color: #ff5858;
 }
 
 .number, .decimal {
-    background-color: #fff;
-    color: #333;
+    background-color: #5f6d82;
 }
 
 .operator {
-    background-color: #0074d9;
-    color: #fff;
+    background-color: #ff8f56;
 }
 
 .equals {
-    background-color: #01ff70;
+    background-color: #ffa961;
     grid-row: span 3;
-    color: #fff;
+    color: #ffffff;
 }
