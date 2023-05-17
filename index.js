@@ -28,4 +28,38 @@ document.addEventListener("DOMContentLoaded", function () {
         // Append the clicked number to the result
         resultElement.value += number;
     }
+
+    // Function to handle operator button clicks
+    function handleOperatorClick(selectedOperator) {
+        if (firstOperand === null) {
+            // If this is the first operator selected, store the current result as the first operand
+            firstOperand = parseFloat(resultElement.value);
+        } else {
+            // Perform the calculation if an operator and first operand already exist
+            const secondOperand = parseFloat(resultElement.value);
+            const result = calculateResult(firstOperand, operator, secondOperand);
+            updateResult(result);
+            firstOperand = result; // Store the result as the new first operand for subsequent calculations
+        }
+        operator = selectedOperator;
+        shouldClearResult = true; // Clear the result before entering the next number
+    }
+
+    // Function to perform the calculation based on the operator selected
+    function calculateResult(firstOperand, operator, secondOperand) {
+        switch (operator) {
+            case '/':
+                return firstOperand / secondOperand;
+            case '*':
+                return firstOperand * secondOperand;
+            case '-':
+                return firstOperand - secondOperand;
+            case '+':
+                return firstOperand + secondOperand;
+            default:
+                return secondOperand; // If no valid operator is selected, return the second operand
+        }
+    }
+
+    // Function to handle the equals button click
 });
